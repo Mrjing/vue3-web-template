@@ -2,7 +2,6 @@
 	"name": "vue3-web-template",
 	"version": "0.0.0",
 	"private": true,
-	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "run-p type-check \"build-only {@}\" --",
@@ -16,7 +15,11 @@
 		"lint:stylelint": "stylelint \"**/*.{css,scss,vue,html}\" --fix",
 		"prepare": "husky install",
 		"commitlint": "commitlint --config commitlint.config.cjs -e -V",
-		"commit": "git pull && git add -A && git-cz && git push"
+		"commit": "git pull && git add -A && git-cz && git push",
+		"preinstall": "npx only-allow pnpm",
+		"predev": "npm run check:node",
+		"prebuild": "npm run check:node",
+		"check:node": "node ./misc/checkNode"
 	},
 	"dependencies": {
 		"pinia": "^2.1.7",
@@ -96,5 +99,9 @@
 		"*.md": [
 			"prettier --write"
 		]
+	},
+	"engines": {
+		"node": "v18.20.4",
+		"pnpm": "v9.7.1"
 	}
 }
