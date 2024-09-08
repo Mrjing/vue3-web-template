@@ -1,39 +1,52 @@
 # vue3-web-template
 
-This template should help get you started developing with Vue 3 in Vite.
+基于 Vue3 + Vite + TypeScript 的 Web 开发项目模板
 
-## Recommended IDE Setup
+## 特点
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+无需项目开发前的各类繁琐规范约束配置，开箱即用，快速搭建项目开发环境。
 
-## Type Support for `.vue` Imports in TS
+- 集成了常用的代码规范配置，ESLint + Prettier + Stylelint
+- 集成了代码提交校验配置，Commitlint + Husky + cz-git
+  ![commitlint](https://cc-web-1313504415.cos.ap-shanghai.myqcloud.com/a88ca76e9fe4a1e81a93fba900f705f.png)
+- 集成了tailwind , 支持使用 vw 自适应布局 （使用postcss-px-to-viewport插件，基于 1920px 设计稿换算）
+  ![tailwind](https://cc-web-1313504415.cos.ap-shanghai.myqcloud.com/2efa7da532ab353c41d245975a9493a.png)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## VSCode 插件要求
 
-## Customize configuration
+ESLint + Prettier + Stylelint
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## 环境要求
 
-## Project Setup
+- Node.js = 18.20.4
+- Pnpm = 9.7.1
+
+### 安装依赖
 
 ```sh
-npm install
+pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### 开发调试
 
 ```sh
-npm run dev
+pnpm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### 打包
 
 ```sh
-npm run build
+pnpm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### 测试
 
 ```sh
-npm run test:unit
+pnpm run test:unit
+```
+
+### 提交代码
+
+```sh
+pnpm commit
 ```
